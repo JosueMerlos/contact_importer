@@ -1,0 +1,38 @@
+<br />
+<div class="row">
+  <div col="col-10">
+    <h2>Files Contacts</h2>
+  </div>
+</div>
+<div class="row">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">FileName</th>
+        <th style="text-align: center;" scope="col">Status</th>
+        <th scope="col">Information</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @user_files.each do |user_file| %>
+        <tr>
+          <th scope="row"><%= user_file.filename %></th>
+          <td style="text-align: center;"><%= user_file.status.upcase %></td>
+          <td><%= user_file.information %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+    </ul>
+  </nav>
+</div>
+<div col="col-2">
+  <a class="btn btn-primary" href="/user_files/new">New File</a>
+</div>
