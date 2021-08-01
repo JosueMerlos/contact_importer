@@ -1,24 +1,19 @@
-# README
+# Test App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+`rails db:create`
+`rails db:migrate`
+`rails db:seed`
 
-Things you may want to cover:
+`rails server`
 
-* Ruby version
+# 1. Login credential
 
-* System dependencies
+* email: test@gmail.com
+* pass: test123
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# 2. Go to File Uploaded menu
+    - Click New File Button
+    - Upload File
+    - specify column order
+    - save
+# 3. Go to home

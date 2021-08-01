@@ -17,10 +17,6 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
-# Simple, efficient background processing for Ruby.
-gem 'sidekiq'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 # Devise is a flexible authentication solution for Rails
@@ -34,6 +30,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 # A ruby gem for validating credit card numbers
 gem 'credit_card_validations'
+
+gem 'kaminari'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
