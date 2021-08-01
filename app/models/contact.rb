@@ -23,7 +23,8 @@ class Contact < ApplicationRecord
   has_secure_password :credit_card
 
   validates :email, presence: true,
-                    uniqueness: true
+                    uniqueness: true,
+                    format: { with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/ }
 
   validate :validate_phone_number
 
@@ -45,7 +46,7 @@ class Contact < ApplicationRecord
   end
 
   def is_valid_phone_number?
-    code_number = phone.to(5)
+    code_number = phone.to(5).try(:strip)
     number = phone.from(6).try(:strip)
     return false unless code_number.match?(/^[(][+]\d{2}[)]/)
 

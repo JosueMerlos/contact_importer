@@ -23,6 +23,8 @@ gem 'redis', '~> 4.0'
 gem 'sidekiq'
 # Use Active Model has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+# Devise is a flexible authentication solution for Rails
+gem 'devise'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -35,6 +37,7 @@ gem 'credit_card_validations'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'pry'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
